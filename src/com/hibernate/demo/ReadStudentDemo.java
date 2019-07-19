@@ -17,17 +17,35 @@ public class ReadStudentDemo {
         try {
             // create a student object
             System.out.println("Creating a new student object...");
-            Student tempStudent = new Student("Paul", "Wall", "paul@luv2code.com");
+            Student tempStudent = new Student("Daffy", "Duck", "paul@luv2code.com");
             // Start a transaction
             session.beginTransaction();
 
             // save the student object
             System.out.println("Saving the student");
+            System.out.println(tempStudent);
             session.save(tempStudent);
 
             // commit transaction
             session.getTransaction().commit();
+
+
+            System.out.println("Saved student. generated id: " + tempStudent.getId());
             System.out.println("Done!");
+
+
+
+            // now get a new session and start transaction
+            session = factory.getCurrentSession();
+            session.beginTransaction();
+            // retrieve student based on the id: primary key
+            System.out.println("Getting student with id: " + tempStudent.getId());
+            Student myStudent = session.get(Student.class, tempStudent.getId());
+
+            System.out.println("Get complete: " + myStudent);
+            session.getTransaction().commit();
+
+            // commit the transaction
         }
         finally {
             factory.close();
