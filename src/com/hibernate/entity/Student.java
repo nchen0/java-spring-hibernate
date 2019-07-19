@@ -1,9 +1,6 @@
 package com.hibernate.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity // Maps the class to a given table, or, create it in the table
 @Table(name="student")
@@ -11,6 +8,7 @@ public class Student {
 
     // Map these fields to database columns
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY) // Default is auto.
     @Column(name="id")
     private int id; // fields
 
