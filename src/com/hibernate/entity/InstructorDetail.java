@@ -26,6 +26,12 @@ public class InstructorDetail {
     @Column
     private String hobby;
 
+
+    // Adding field for bi-directional flow;
+    @OneToOne(mappedBy = "instructorDetail", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH}) // So we want everything besides the remove, if we only want to remove 1.
+    private Instructor instructor;
+
+
     public InstructorDetail() {
     }
 
@@ -65,6 +71,14 @@ public class InstructorDetail {
                 ", youtubeChannel='" + youtubeChannel + '\'' +
                 ", hobby='" + hobby + '\'' +
                 '}';
+    }
+
+    public Instructor getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
     }
 }
 

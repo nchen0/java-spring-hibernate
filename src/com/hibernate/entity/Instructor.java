@@ -21,7 +21,7 @@ public class Instructor {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="instructor_detail_id") // This is the table name in the foreign table.
-    private int instructorDetail;
+    private InstructorDetail instructorDetail;
 
     public Instructor() {
     }
@@ -64,11 +64,11 @@ public class Instructor {
         this.email = email;
     }
 
-    public int getInstructorDetail() {
+    public InstructorDetail getInstructorDetail() {
         return instructorDetail;
     }
 
-    public void setInstructorDetail(int instructorDetail) {
+    public void setInstructorDetail(InstructorDetail instructorDetail) {
         this.instructorDetail = instructorDetail;
     }
 
