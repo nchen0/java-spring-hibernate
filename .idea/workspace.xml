@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06df0bd4-2b91-4ab4-a27a-d7164cd9307e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3. Hibernate/com/hibernate/demo/CreateEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/3. Hibernate/com/hibernate/demo/CreateEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3. Hibernate/com/hibernate/demo/CreateStudentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3. Hibernate/com/hibernate/demo/DeleteStudentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3. Hibernate/com/hibernate/demo/PrimaryKeyDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3. Hibernate/com/hibernate/demo/QueryStudentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3. Hibernate/com/hibernate/demo/ReadStudentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3. Hibernate/com/hibernate/demo/UpdateStudentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3. Hibernate/com/hibernate/entity/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/demo/CreateEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hibernate/demo/CreateEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/demo/CreateStudentDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/demo/DeleteStudentDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/demo/PrimaryKeyDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/demo/QueryStudentDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/demo/ReadStudentDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/demo/UpdateStudentDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hibernate/entity/Student.java" beforeDir="false" />
-    </list>
+    <list default="true" id="06df0bd4-2b91-4ab4-a27a-d7164cd9307e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hibernate/demo/DeleteEmployee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+            <state relative-caret-position="476">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -144,8 +126,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="701" />
-    <option name="y" value="97" />
+    <option name="x" value="172" />
+    <option name="y" value="94" />
     <option name="width" value="960" />
     <option name="height" value="970" />
   </component>
@@ -217,7 +199,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563634731690" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563646092372" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jaxb-api-2.3.0.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -338,15 +320,16 @@
       <workItem from="1563494755719" duration="2729000" />
       <workItem from="1563562251126" duration="4080000" />
       <workItem from="1563627634375" duration="1735000" />
-      <workItem from="1563629784471" duration="4620000" />
+      <workItem from="1563629784471" duration="5247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15075000" />
+    <option name="totallyTimeSpent" value="15702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -502,8 +485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hibernate/demo/DeleteEmployee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+        <state relative-caret-position="476">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
