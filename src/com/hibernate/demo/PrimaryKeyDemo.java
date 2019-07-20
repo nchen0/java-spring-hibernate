@@ -19,8 +19,8 @@ public class PrimaryKeyDemo {
             // create 3 student objects
             System.out.println("Creating 3 student objects...");
             Student tempStudent = new Student("Paul", "Wall", "paul@luv2code.com");
-            Student tempStudent2 = new Student("John", "Wall", "pau2l@luv2code.com");
-            Student tempStudent3 = new Student("Mary", "Kay", "pau3l@luv2code.com");
+            Student tempStudent2 = new Student("John", "Wall", "pau2l@hello.com");
+            Student tempStudent3 = new Student("Mary", "Kay", "pau3l@hello.com");
             Student tempStudent4 = new Student("Mary", "Ellsworth", "pau3l@luv2code.com");
             Student tempStudent5 = new Student("Tom", "Phillips", "pau3l@luv2code.com");
 
