@@ -17,6 +17,10 @@ public class CreateEmployee {
             // Create an Employee object
             System.out.println("Creating an employee object");
             Employee employee1 = new Employee("Nick", "Jones", "Apple");
+            Employee employee2 = new Employee("Jane", "Hines", "Facebook");
+            Employee employee3 = new Employee("Hannah", "Tray", "Apple");
+            Employee employee4 = new Employee("Sam", "Jones", "Google");
+            Employee employee5 = new Employee("Tracy", "Hanks", "Amazon");
 
             // start a transaction
             session.beginTransaction();
@@ -24,6 +28,10 @@ public class CreateEmployee {
             // save the employee object in the database
             System.out.println("Saving employees");
             session.save(employee1);
+            session.save(employee2);
+            session.save(employee3);
+            session.save(employee4);
+            session.save(employee5);
             session.getTransaction().commit();
             System.out.println("\nCreate Done");
         } finally {
