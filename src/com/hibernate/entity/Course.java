@@ -1,6 +1,8 @@
 package com.hibernate.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table
@@ -15,9 +17,21 @@ public class Course {
     private String title;
 
     // Course has many to one relationship with instructor
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH}) // For our requirement we didn't want to delete.
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH}) // For our requirement we didn't want to delete.
     @JoinColumn(name="instructor_id")
     private Instructor instructor;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="course_id")
+    private List<Review> reviews;
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
 
     public Course() {
     }
@@ -48,6 +62,13 @@ public class Course {
 
     public void setInstructor(Instructor instructor) {
         this.instructor = instructor;
+    }
+
+    public void addReview(Review theReview) {
+        if (reviews == null) {
+            reviews = new ArrayList<>();
+        }
+        reviews.add(theReview);
     }
 
     @Override
