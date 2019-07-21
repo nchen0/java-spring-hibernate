@@ -8,17 +8,22 @@ public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private int id;
 
+    @Column
     private String title;
+
+    // Course has many to one relationship with instructor
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH}) // For our requirement we didn't want to delete.
+    @JoinColumn(name="instructor_id")
     private Instructor instructor;
 
     public Course() {
     }
 
-    public Course(String title, Instructor instructor) {
+    public Course(String title) {
         this.title = title;
-        this.instructor = instructor;
     }
 
     public int getId() {

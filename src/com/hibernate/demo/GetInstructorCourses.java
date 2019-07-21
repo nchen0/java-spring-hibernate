@@ -5,10 +5,9 @@ import com.hibernate.entity.Instructor;
 import com.hibernate.entity.InstructorDetail;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-
 import org.hibernate.cfg.Configuration;
 
-public class CreateInstructorDemo {
+public class GetInstructorCourses {
     public static void main(String[] args) {
 
         // Create session factory
@@ -19,26 +18,13 @@ public class CreateInstructorDemo {
                 .buildSessionFactory();
         // create session
         Session session = factory.getCurrentSession();
-
-        // use session object to save Java object
         try {
-
-            // Create the objects
-            Instructor tempInstructor = new Instructor("Susan", "Wiley", "hello@hello2.com");
-            InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.youtube.com/hello2", "Gaming");
-
-
-
-            // Associate the objects
-            tempInstructor.setInstructorDetail(tempInstructorDetail);
-
-            // Start a transaction
             session.beginTransaction();
+            Instructor tempInstructor = session.get(Instructor.class, 1);
 
-            // Save the instructor: Because of the CascadeType.ALL, this will also save the details object.
-            session.save(tempInstructor);
+            System.out.println("Instructor: "+ tempInstructor);
+            System.out.println("Courses: " + tempInstructor.getCourses());
 
-            // Commit transaction
             session.getTransaction().commit();
         }
         finally {
