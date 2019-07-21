@@ -25,7 +25,7 @@ public class Instructor {
     @JoinColumn(name="instructor_detail_id") // This is the table name in the foreign table.
     private InstructorDetail instructorDetail;
 
-    @OneToMany(mappedBy="instructor", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @OneToMany(fetch = FetchType.LAZY, mappedBy="instructor", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     private List<Course> courses;
 
     public Instructor() {

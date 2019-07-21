@@ -8,7 +8,7 @@ public class TestJdbc {
 
     public static void main(String[] args) {
 	    // write your code here
-        String jdbcUrl = "jdbc:mysql://localhost:3306/zoo_table?useSSL=false&serverTimezone=UTC";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/hb-03-one-to-many?useSSL=false&serverTimezone=UTC";
         String user = "hbstudent";
         String pass = "hbstudent";
         try {
