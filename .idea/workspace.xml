@@ -206,9 +206,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563741391187" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563827337291" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jaxb-api-2.3.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -237,22 +237,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DeleteCourse">
+  <component name="RunManager" selected="Application.TestJdbc">
     <configuration name="CreateCourseAndReviews" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hibernate.demo.CreateCourseAndReviews" />
-      <module name="3. Hibernate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hibernate.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateZoo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hibernate.demo.CreateZoo" />
       <module name="3. Hibernate" />
       <extension name="coverage">
         <pattern>
@@ -303,13 +290,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestJdbc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jdbc.TestJdbc" />
+      <module name="3. Hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestJdbc" />
         <item itemvalue="Application.DeleteCourse" />
         <item itemvalue="Application.GetCourseAndReviews" />
         <item itemvalue="Application.CreateCourseAndReviews" />
         <item itemvalue="Application.EagerLazyDemo" />
-        <item itemvalue="Application.CreateZoo" />
       </list>
     </recent_temporary>
   </component>
