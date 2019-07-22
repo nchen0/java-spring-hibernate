@@ -1,14 +1,11 @@
 package com.hibernate.demo;
 
-import com.hibernate.entity.Course;
-import com.hibernate.entity.Instructor;
-import com.hibernate.entity.InstructorDetail;
-import com.hibernate.entity.Review;
+import com.hibernate.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class DeleteCourse {
+public class CreateCoursesForStudent {
     public static void main(String[] args) {
 
         // Create session factory
@@ -17,16 +14,28 @@ public class DeleteCourse {
                 .addAnnotatedClass(InstructorDetail.class)
                 .addAnnotatedClass(Course.class)
                 .addAnnotatedClass(Review.class)
+                .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
-        // create session
         Session session = factory.getCurrentSession();
 
         // use session object to save Java object
         try {
             session.beginTransaction();
 
-            Course course = session.get(Course.class, 10);
-            session.delete(course);
+            // Get the student mary from database
+            Student mary = session.get(Student.class, 2);
+
+            // Create more courses
+            Course newCourse1 = new Course("Social Studies");
+            Course newCourse2 = new Course("Science");
+
+
+            // Add mary to those courses
+            newCourse1.addStudent(mary);
+            newCourse2.addStudent(mary);
+
+            session.save(newCourse1);
+            session.save(newCourse2);
 
             session.getTransaction().commit();
         }

@@ -1,14 +1,11 @@
 package com.hibernate.demo;
 
-import com.hibernate.entity.Course;
-import com.hibernate.entity.Instructor;
-import com.hibernate.entity.InstructorDetail;
-import com.hibernate.entity.Review;
+import com.hibernate.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class GetCourseAndReviews {
+public class CreateCourseAndStudents {
     public static void main(String[] args) {
 
         // Create session factory
@@ -17,6 +14,7 @@ public class GetCourseAndReviews {
                 .addAnnotatedClass(InstructorDetail.class)
                 .addAnnotatedClass(Course.class)
                 .addAnnotatedClass(Review.class)
+                .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
         // create session
         Session session = factory.getCurrentSession();
@@ -24,15 +22,25 @@ public class GetCourseAndReviews {
         // use session object to save Java object
         try {
             session.beginTransaction();
+            Course tempCourse = new Course("Math");
 
-            // get the course
-            Course tempCourse = session.get(Course.class, 10);
+            // Save the course
+            System.out.println("\nSaving the course....");
+            session.save(tempCourse);
+            System.out.println("Saved the course: " + tempCourse);
 
-            // Print the course
-            System.out.println("Course: " + tempCourse);
+            // Create the students
+            Student tempStudent1 = new Student("John", "Doe", "john2@code.com");
+            Student tempStudent2 = new Student("Mary", "Jane", "mary@code.com");
 
-            // Print the course reviews
-            System.out.println("Reviews: " + tempCourse.getReviews());
+            // Add students to the course
+            tempCourse.addStudent(tempStudent1);
+            tempCourse.addStudent(tempStudent2);
+
+            // Save the students
+            System.out.println("\nSaving the students");
+            session.save(tempStudent1);
+            session.save(tempStudent2);
 
             session.getTransaction().commit();
         }
